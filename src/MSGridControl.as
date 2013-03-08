@@ -35,7 +35,16 @@ package {
 			_replayButton = new MovieClip();
 			_replayButton.graphics.beginFill(0xf2f2f2);
 			_replayButton.graphics.drawRect(0, 0, 150, 75);
-			_replayButton.graphics.endFill;
+			_replayButton.graphics.endFill(); 
+			
+			var _insText:TextField = new TextField();
+			
+			_insText.text = "CLICK to reveal, SPACE+CLICK to mark as mine.";
+			_insText.width = 300;
+			_insText.x = 100;
+			_insText.y = 450;
+			
+			this.addChild(_insText);
 			
 			
 			

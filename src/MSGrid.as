@@ -127,7 +127,7 @@ package {
 					_first = false;
 				}
 				if ( $b.isMine ) {
-					trace("GAME OVER GAME OVER");
+		//			trace("GAME OVER GAME OVER");
 					$b.graphics.beginFill(0x333333);
 					$b.graphics.drawRect(0, 0, 20, 20);
 					$b.graphics.endFill();
@@ -144,11 +144,9 @@ package {
 			if( $b.flagged ){
 				$b.flagged = false;
 				_minePlacedCount--;
-				trace("MINED:", _minePlacedCount);
 			}else{
 				$b.flagged = true;
 				_minePlacedCount++;
-				trace("MINED:", _minePlacedCount);
 			}
 			checkWin();
 		}
@@ -163,7 +161,7 @@ package {
 					}
 				}
 				if ( win ) {
-					trace("WIN WIN WIN WIN");
+			//		trace("WIN WIN WIN WIN");
 					gameClear();
 				}
 			}
@@ -241,14 +239,12 @@ package {
 			if ( $b.isMine ) return;
 			if ( $b.mineCount > 0) {
 				_checkedCount++
-				trace("CHECKED:", _checkedCount);
 				$b.checked = true;
 				checkWin();
 				return;
 			}else {
 				_checkedCount++;				
 				checkWin();
-				trace("CHECKED:", _checkedCount);
 
 				$b.checked = true;
 				if ( $b.xx > 0 && !_grid[ IX($b.xx - 1, $b.yy )].checked ) {

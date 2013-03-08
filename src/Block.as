@@ -41,10 +41,10 @@ package
 			addEventListener(MouseEvent.CLICK, onClick);
 		}
 		
-		private function onClick($MouseEvent):void {
-			var $e:DataEvent = new DataEvent("CLICKED");
-			$e.data = _text.text;
-			dispatchEvent($e);
+		private function onClick($e:MouseEvent):void {
+			var e:DataEvent = new DataEvent("CLICKED");
+			e.data = _text.text;
+			dispatchEvent(e);
 		}
 		
 		public function reset():void {
